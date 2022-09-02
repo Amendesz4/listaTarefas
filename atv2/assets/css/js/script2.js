@@ -12,7 +12,20 @@ novaTarefa.addEventListener('click',(evento) =>{
     tarefa.classList.add('task')
     const conteudo = `<p class="content">${valor}</p>`
     tarefa.innerHTML = conteudo
+    tarefa.appendChild(botao())
+
     lista.appendChild(tarefa)
     input.value=""
  
 })
+
+const botao = () => {
+    const botaoConclui= document.createElement('button')
+    botaoConclui.innerHTML='conclui'
+
+    botaoConclui.addEventListener('click',() =>{
+        console.log("Fui clicado")
+    })
+   return botaoConclui
+}
+
